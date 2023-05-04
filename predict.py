@@ -124,7 +124,7 @@ def predict(_run, _log):
 
         image = np.concatenate((image, pred_seg, blend_pred, mask, depth), axis=1)
         path = cfg.out_path
-        cv2.imwrite(os.path.join(path , 'out.jpg'), img)
+        cv2.imwrite(os.path.join(path , 'out.jpg'), image)
         cv2.waitKey(0)
 #         cv2.imshow('image', image)
 #         cv2.waitKey(0)
