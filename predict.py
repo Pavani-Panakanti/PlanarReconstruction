@@ -132,5 +132,5 @@ if __name__ == '__main__':
     assert LooseVersion(torch.__version__) >= LooseVersion('0.4.0'), \
         'PyTorch>=0.4.0 is required'
 
-    ex.add_config('./configs/predict.yaml')
+    ex.add_config('/content/PlanarReconstruction/configs/predict.yaml')
     ex.run_commandline()
