@@ -123,9 +123,9 @@ def predict(_run, _log):
         depth = cv2.cvtColor(cv2.resize(depth, (w, h)), cv2.COLOR_GRAY2BGR)
 
         image = np.concatenate((image, pred_seg, blend_pred, mask, depth), axis=1)
-
-        cv2.imshow('image', image)
-        cv2.waitKey(0)
+        return image
+#         cv2.imshow('image', image)
+#         cv2.waitKey(0)
 
 
 if __name__ == '__main__':
