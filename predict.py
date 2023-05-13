@@ -136,5 +136,5 @@ if __name__ == '__main__':
     assert LooseVersion(torch.__version__) >= LooseVersion('0.4.0'), \
         'PyTorch>=0.4.0 is required'
     currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    ex.add_config(f'{currentdir}/PlanarReconstruction/configs/predict.yaml')
+    ex.add_config(f'{currentdir}/configs/predict.yaml')
     ex.run_commandline()
