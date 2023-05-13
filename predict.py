@@ -1,5 +1,6 @@
 import os
 import cv2
+import inspect
 import random
 import numpy as np
 from PIL import Image
@@ -134,6 +135,6 @@ def predict(_run, _log):
 if __name__ == '__main__':
     assert LooseVersion(torch.__version__) >= LooseVersion('0.4.0'), \
         'PyTorch>=0.4.0 is required'
-
-    ex.add_config('/content/PlanarReconstruction/configs/predict.yaml')
+    currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    ex.add_config(f'{currentdir}/PlanarReconstruction/configs/predict.yaml')
     ex.run_commandline()
